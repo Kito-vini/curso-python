@@ -1,3 +1,5 @@
+# Exercício de cálculo de custo médio de combustpivel
+
 combustivelGasto = int(input("Digite a quantidade gasta de combustível: "))
 kilometrosPercorrido = int(input("Digite a quantidade de KM percorridos: "))
 

@@ -2,7 +2,8 @@
 
 idade = int(input("Qual a sua idade? "))
 
-if(idade >= 18):
-    print("Você é de maior!")
-else:
-    print("Você é de menor!")
+if __name__ == '__main__':
+    if(idade >= 18):
+        print("Você é de maior!")
+    else:
+        print("Você é de menor!")

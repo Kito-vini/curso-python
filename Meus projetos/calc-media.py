@@ -9,7 +9,7 @@ def janelaApresentacao():
         [sg.Input('nome', key='nome')],
         [sg.Button('Continuar')]
     ]
-    return sg.Window('name', layout=layout, finalize=True)
+    return sg.Window('Calculadora de média', layout=layout, finalize=True)
 
 def janelaCalculadora():
     sg.theme('Reds')

@@ -2,21 +2,21 @@ import PySimpleGUI as sg
 
 # Criando as janelas e layouts
 def janelaApresentacao():
-    sg.theme('Reds')
+    sg.theme('BlueMono')
     layout = [
         [sg.Text('Calculadora de média escolar'), sg.Text('       '), sg.Text('Program by Kito-Vini')],
         [sg.Text('Digite seu nome:')],
-        [sg.Input('nome', key='nome')],
+        [sg.Input(key='nome')],
         [sg.Button('Continuar')]
     ]
     return sg.Window('Calculadora de média', layout=layout, finalize=True)
 
 def janelaCalculadora():
-    sg.theme('Reds')
+    sg.theme('BlueMono')
     layout = [
-        [sg.Text('Digite a nota da AV1'), sg.Input('av1', key='av1', size=(20,1))],
-        [sg.Text('Digite a nota da AV2'), sg.Input('av2', key='av2', size=(20,1))],
-        [sg.Text('Digite a nota da AV3'), sg.Input('av3', key='av3', size=(20,1))],
+        [sg.Text('Digite a nota da AV1'), sg.Input(key='av1', size=(20,1))],
+        [sg.Text('Digite a nota da AV2'), sg.Input(key='av2', size=(20,1))],
+        [sg.Text('Digite a nota da AV3'), sg.Input(key='av3', size=(20,1))],
         [sg.Button('Calcular'), sg.Button('Sair')]
     ]
     return sg.Window('notas', layout=layout, finalize=True)
@@ -42,14 +42,14 @@ while True:
     # Quando a janela for fechada
     if window == janela1 and event == sg.WINDOW_CLOSED:
         break
-    if window == janela1 and event == 'Continuar':
+    elif window == janela1 and event == 'Continuar':
         nome = values['nome']
         sg.popup('Olá', nome, 'Vamos calcular sua média?')
         janela2 = janelaCalculadora()
         janela1.hide()
-    if window == janela2 and event == 'Calcular':
+    elif window == janela2 and event == 'Calcular':
         calcular()
-    if window == janela2 and event == 'Sair':
+    elif window == janela2 and event == 'Sair':
         break
         
         

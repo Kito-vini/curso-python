@@ -12,7 +12,7 @@ def janelaApresentacao():
     return sg.Window('Calculadora de média', layout=layout, finalize=True)
 
 def janelaCalculadora():
-    sg.theme('BlueMono')
+    sg.theme('BlueMonocls')
     layout = [
         [sg.Text('Digite a nota da AV1'), sg.Input(key='av1', size=(20,1))],
         [sg.Text('Digite a nota da AV2'), sg.Input(key='av2', size=(20,1))],

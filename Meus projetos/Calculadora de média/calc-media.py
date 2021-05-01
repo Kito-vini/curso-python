@@ -12,7 +12,7 @@ def janelaApresentacao():
     return sg.Window('Calculadora de média', layout=layout, finalize=True)
 
 def janelaCalculadora():
-    sg.theme('BlueMonocls')
+    sg.theme('BlueMono')
     layout = [
         [sg.Text('Digite a nota da AV1'), sg.Input(key='av1', size=(20,1))],
         [sg.Text('Digite a nota da AV2'), sg.Input(key='av2', size=(20,1))],
@@ -26,7 +26,7 @@ janela1, janela2 = janelaApresentacao(), None
 
 # Criar a função calcular
 def calcular():
-    media = (float(values['av1']) + float(values['av2']) + float(values['av3'])) / 3
+    media = round((float(values['av1']) + float(values['av2']) + float(values['av3'])) / 3, 2)
     print(media)
     if media >= 7:
         sg.popup('Sua média é: ', media, 'Parabéns! Você foi aprovado')

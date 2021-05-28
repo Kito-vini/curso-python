@@ -24,7 +24,6 @@ def janelaInfo():
         [sg.Text(length)],
         [sg.Text(rating)],
         [sg.Button('Download'), sg.Button('Sair')]
-    global link = values['url1']
     ]
     return sg.Window('Informações do vídeo', layout=layout, finalize=True)
 

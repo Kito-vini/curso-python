@@ -13,5 +13,5 @@ con = firebirdsql.connect(
 
 q = con.cursor()
 q.execute("SELECT * FROM cliente")
-clientes = q.fetchall()
+cliente = q.fetchall()
 print(cliente)
